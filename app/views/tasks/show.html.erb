@@ -1,0 +1,30 @@
+<%# <h1> <%= @task.title %>
+
+<%# <p><%= @task.details %>
+<%# <p><%= @task.completed %>
+
+<%# <%= link_to "Update task", edit_task_path(@task) %>
+<%# <%= link_to "All tasks", tasks_path(@task) %>
+
+
+<div class="container mt-5">
+
+  <div class="card mx-auto" style="max-width: 500px;">
+
+    <div class="card-body">
+      <h1 class="card-title text-center"> <%= @task.title %> </h1>
+      <p class="card-text"><%= @task.details %></p>
+      <p class="card-text"><%= @task.completed ? "Completed" : "Incomplete" %></p>
+
+      <div class="text-center mt-4">
+        <%= link_to edit_task_path(@task), class: "btn btn-primary mr-2" do %>
+          <i class="fa fa-edit"></i> Update task
+        <% end %>
+        <%= link_to tasks_path, class: "btn btn-secondary" do %>
+          <i class="fa fa-list-ul"></i> All tasks
+        <% end %>
+      </div>
+    
+    </div>
+  </div>
+</div>

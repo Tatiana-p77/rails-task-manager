@@ -1,0 +1,47 @@
+<%# <h1>Update Task</h1> %>
+
+<%# <%= form_with model: @task, local:true do |f| %>
+  <%# <div> %>
+    <%# <%= f.label :title, "Title" %>
+    <%# <%= f.text_field :title %>
+  <%# </div> %>
+
+  <%# <div> %>
+    <%# <%= f.label :details, "Details" %>
+    <%# <%= f.text_area :details %>
+  <%# </div> %>
+
+  <%# <div> %>
+    <%# <%= f.label :completed, "Completed" %>
+    <%# <%= f.check_box :completed %>
+  <%# </div> %>
+
+  <%# <%= f.submit "Update" %>
+<%# <% end %>
+
+
+<div class="container mt-5">
+  <div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-body">
+      <h1 class="text-center mb-4">Edit Task</h1>
+      <%= form_with model: @task, local: true, class: "mx-auto" do |f| %>
+        <div class="form-group">
+          <%= f.label :title, "Title", class: "font-weight-bold" %>
+          <%= f.text_field :title, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :details, "Details", class: "font-weight-bold" %>
+          <%= f.text_area :details, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :completed, "Completed", class: "font-weight-bold" %>
+          <%= f.check_box :completed %>
+        </div>
+
+        <%= f.submit "Update Task", class: "btn btn-primary mt-3" %>
+      <% end %>
+    </div>
+  </div>
+</div>

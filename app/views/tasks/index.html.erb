@@ -1,0 +1,19 @@
+<h1 class="text-center my-4">🌸Liste des taches🌸</h1>
+
+<div class="text-center mb-4">
+  <%= link_to "New Task", new_task_path, class: "btn btn-custom" %>
+</div>
+
+<div class="container" style="max-width: 400px;">
+  <% @tasks.each do |task| %>
+    <div class="my-2 d-flex justify-content-center align-items-center">
+      <input type="checkbox" class="mr-2" id="task-<%= task.id %>" <%= task.completed ? 'checked' : '' %>
+      <label for="task-<%= task.id %>">
+        <%= link_to task.title, task_path(task), class: "mr-2" %>
+      </label>
+      <%= link_to destroy_task_path(task), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' } do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>

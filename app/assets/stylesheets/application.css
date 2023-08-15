@@ -13,3 +13,88 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Style général de la page */
+
+
+/* Style global */
+body {
+  font-family: 'Patrick Hand', cursive; /* Une police douce et arrondie */
+  background-color: #FFE0E9; /* Un rose doux pour le fond */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: black; /* Couleur noire pour les liens */
+}
+
+a:hover {
+  text-decoration: underline; /* Souligne le lien au survol */
+  color: #FF1493;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+/* Poubelle (icone) */
+.fa-trash {
+  margin-left: 15px;
+  color: #cd2ef1; /* Couleur rose pour la poubelle, vous pouvez la changer si nécessaire */
+}
+
+.btn-custom {
+  background-color: #EE82EE; /* Couleur violette */
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #FF69B4; /* Couleur rose lors du survol */
+}
+
+
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent pour le contraste */
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Ombre douce pour donner de la profondeur */
+}
+
+h1 {
+  text-align: center;
+  color: #FF61A6; /* Un rose plus vif pour les titres */
+  margin-bottom: 30px;
+}
+
+/* Style pour la liste des tâches */
+div.task-item {
+  display: flex;
+  align-items: center; /* Aligner verticalement les éléments à l'intérieur */
+  justify-content: space-between; /* Espacer les éléments */
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #FFF5F8; /* Un rose très léger pour la box */
+  border-radius: 10px;
+}
+
+div.task-item input[type="checkbox"] {
+  margin-right: 15px; /* Espace entre la checkbox et le titre */
+}
+
+div.task-item a {
+  margin-right: 15px; /* Espace entre le titre et l'icône poubelle */
+}
+
+div.task-item a.delete-task {
+  color: #FF61A6; /* Couleur rose pour l'icône de la poubelle */
+}
+
+div.task-item a.delete-task:hover {
+  color: #FF408D;
+}
